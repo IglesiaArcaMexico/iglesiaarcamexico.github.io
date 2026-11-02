@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Iglesia ARCA México</title>
+<meta name="description" content="Iglesia ARCA en México: enseñanza bíblica, ministerios y comunidad. Te esperamos.">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Lora:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --oxford:#3C3F44; --negro:#1C1C1C; --blanco:#FFFFFF; --hueso:#F5F3EF; --linea:#E2DFD9; --acento:#8C7A5B;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:"Josefin Sans",system-ui,sans-serif;color:var(--negro);background:var(--blanco);line-height:1.6;font-size:18px}
+  a{color:inherit}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+
+  /* Encabezado */
+  header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--linea)}
+  .nav{display:flex;align-items:center;height:68px}
+  .nav nav{margin-left:auto}
+  .marca{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:600;letter-spacing:.25em;color:var(--oxford)}
+  .marca img{height:44px;width:auto}
+  nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
+  nav a{text-decoration:none;font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:var(--oxford)}
+  nav a:hover{color:var(--negro)}
+  .menu-btn{display:none;background:none;border:1px solid var(--linea);border-radius:6px;padding:6px 10px;font:inherit;color:var(--oxford)}
+  @media (max-width:860px){
+    .menu-btn{display:block;margin-left:auto}
+    .nav nav{margin-left:0}
+    nav ul{display:none;position:absolute;left:0;right:0;top:68px;flex-direction:column;gap:0;background:var(--blanco);border-bottom:1px solid var(--linea)}
+    nav ul.abierto{display:flex}
+    nav li a{display:block;padding:14px 20px;border-top:1px solid var(--linea)}
+  }
+
+  /* Portada */
+  .hero{background:var(--hueso);text-align:center;padding:70px 0 80px}
+  .hero img{width:220px;margin:0 auto 28px}
+  .hero h1{font-weight:300;font-size:clamp(28px,5vw,46px);letter-spacing:.06em;margin:0 0 10px;color:var(--oxford)}
+  .hero p.cita{font-family:Lora,serif;font-style:italic;color:#5a5d63;max-width:640px;margin:0 auto 30px}
+  .btn{display:inline-block;padding:13px 28px;border-radius:999px;background:var(--oxford);color:var(--blanco);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;font-size:15px}
+  .btn.sec{background:transparent;color:var(--oxford);border:1.5px solid var(--oxford);margin-left:8px}
+
+  /* Secciones */
+  section{padding:72px 0;border-bottom:1px solid var(--linea)}
+  section:nth-of-type(even){background:var(--hueso)}
+  h2{font-weight:300;font-size:clamp(26px,4vw,36px);letter-spacing:.12em;text-transform:uppercase;color:var(--oxford);margin:0 0 8px}
+  .sub{color:var(--acento);margin:0 0 32px;letter-spacing:.04em}
+  .grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+  .card{background:var(--blanco);border:1px solid var(--linea);border-radius:12px;padding:24px}
+  .card h3{margin:0 0 6px;font-weight:600;color:var(--oxford)}
+  .card p{margin:0;color:#4a4d52}
+  .pendiente{background:#FFF6D9;border:1px dashed #D9B44A;border-radius:4px;padding:0 4px}
+  .horario{font-size:22px;color:var(--oxford)}
+  .video{aspect-ratio:16/9;background:#d9d6d0;border-radius:12px;display:grid;place-items:center;color:#6b6e73}
+  .fotos{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}
+  .fotos div{aspect-ratio:1;background:#d9d6d0;border-radius:10px;display:grid;place-items:center;color:#6b6e73;font-size:14px}
+  .mapa{aspect-ratio:16/9;background:#d9d6d0;border-radius:12px;display:grid;place-items:center;color:#6b6e73}
+
+  footer{background:var(--negro);color:#cfcfcf;text-align:center;padding:40px 0;font-size:15px}
+  footer a{color:#fff}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="marca" href="#inicio"><img src="img/logo-arca.png" alt="Logo Iglesia ARCA"> ARCA</a>
+    <button class="menu-btn" aria-label="Abrir menú" onclick="document.getElementById('menu').classList.toggle('abierto')">☰ Menú</button>
+    <nav>
+      <ul id="menu" onclick="this.classList.remove('abierto')">
+        <li><a href="#nosotros">Quiénes somos</a></li>
+        <li><a href="#creemos">Lo que creemos</a></li>
+        <li><a href="#ensenanza">Enseñanza</a></li>
+        <li><a href="#ministerios">Ministerios</a></li>
+        <li><a href="#eventos">Eventos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- 1. INICIO -->
+  <div class="hero" id="inicio">
+    <div class="wrap">
+      <img src="img/logo-arca.png" alt="Logo Iglesia ARCA">
+      <h1>Bienvenido a la Iglesia ARCA</h1>
+      <p class="cita"><span class="pendiente">[Versículo o frase de bienvenida de la iglesia]</span></p>
+      <p class="horario">Domingos <span class="pendiente">[hora]</span> · <span class="pendiente">[ciudad]</span></p>
+      <p><a class="btn" href="#contacto">Visítanos</a><a class="btn sec" href="#ensenanza">Ver enseñanzas</a></p>
+    </div>
+  </div>
+
+  <!-- 2. QUIÉNES SOMOS -->
+  <section id="nosotros">
+    <div class="wrap">
+      <h2>Quiénes somos</h2>
+      <p class="sub">Nuestra historia, misión y visión</p>
+      <div class="grid">
+        <div class="card"><h3>Nuestra historia</h3><p><span class="pendiente">[Cómo y cuándo nació la Iglesia ARCA]</span></p></div>
+        <div class="card"><h3>Misión</h3><p><span class="pendiente">[Misión de la iglesia]</span></p></div>
+        <div class="card"><h3>Visión</h3><p><span class="pendiente">[Visión de la iglesia]</span></p></div>
+        <div class="card"><h3>Pastores</h3><p><span class="pendiente">[Nombres, foto y una breve presentación]</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. LO QUE CREEMOS -->
+  <section id="creemos">
+    <div class="wrap">
+      <h2>Lo que creemos</h2>
+      <p class="sub">Nuestra declaración de fe</p>
+      <div class="grid">
+        <div class="card"><h3>La Biblia</h3><p><span class="pendiente">[Punto de fe]</span></p></div>
+        <div class="card"><h3>Dios</h3><p><span class="pendiente">[Punto de fe]</span></p></div>
+        <div class="card"><h3>Jesucristo</h3><p><span class="pendiente">[Punto de fe]</span></p></div>
+        <div class="card"><h3>La Iglesia</h3><p><span class="pendiente">[Punto de fe]</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. ENSEÑANZA -->
+  <section id="ensenanza">
+    <div class="wrap">
+      <h2>Enseñanza</h2>
+      <p class="sub">Prédicas y estudios bíblicos</p>
+      <div class="grid">
+        <div><div class="video">Video de YouTube</div><p><strong>Prédica más reciente</strong><br><span class="pendiente">[Título y fecha]</span></p></div>
+        <div><div class="video">Video de YouTube</div><p><strong>Estudio bíblico</strong><br><span class="pendiente">[Título y fecha]</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. MINISTERIOS -->
+  <section id="ministerios">
+    <div class="wrap">
+      <h2>Ministerios</h2>
+      <p class="sub">Hay un lugar para ti</p>
+      <div class="grid">
+        <div class="card"><h3>Niños</h3><p><span class="pendiente">[Descripción y horario]</span></p></div>
+        <div class="card"><h3>Jóvenes</h3><p><span class="pendiente">[Descripción y horario]</span></p></div>
+        <div class="card"><h3>Matrimonios</h3><p><span class="pendiente">[Descripción y horario]</span></p></div>
+        <div class="card"><h3>Alabanza</h3><p><span class="pendiente">[Descripción y horario]</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. EVENTOS + 7. GALERÍA -->
+  <section id="eventos">
+    <div class="wrap">
+      <h2>Eventos</h2>
+      <p class="sub">Próximas actividades</p>
+      <div class="grid">
+        <div class="card"><h3><span class="pendiente">[Fecha]</span></h3><p><span class="pendiente">[Nombre del evento y lugar]</span></p></div>
+        <div class="card"><h3><span class="pendiente">[Fecha]</span></h3><p><span class="pendiente">[Nombre del evento y lugar]</span></p></div>
+        <div class="card"><h3><span class="pendiente">[Fecha]</span></h3><p><span class="pendiente">[Nombre del evento y lugar]</span></p></div>
+      </div>
+      <h2 style="margin-top:56px">Galería</h2>
+      <p class="sub">Momentos de nuestra comunidad</p>
+      <div class="fotos"><div>Foto</div><div>Foto</div><div>Foto</div><div>Foto</div></div>
+    </div>
+  </section>
+
+  <!-- 8. CONTACTO -->
+  <section id="contacto">
+    <div class="wrap">
+      <h2>Contacto</h2>
+      <p class="sub">Te esperamos</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Dirección</h3><p><span class="pendiente">[Calle, número, colonia, ciudad]</span></p>
+          <h3 style="margin-top:18px">Horarios</h3><p><span class="pendiente">[Días y horas de reunión]</span></p>
+          <h3 style="margin-top:18px">Escríbenos</h3><p>WhatsApp: <span class="pendiente">[número]</span><br>Correo: <span class="pendiente">[correo]</span><br>Facebook / Instagram: <span class="pendiente">[enlaces]</span></p>
+        </div>
+        <div class="mapa">Mapa de Google</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© Iglesia ARCA México</p>
+  </div>
+</footer>
+
+</body>
+</html>
