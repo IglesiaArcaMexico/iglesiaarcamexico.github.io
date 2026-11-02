@@ -60,8 +60,11 @@
   .pendiente{background:#FFF6D9;color:#5b4632;font-style:normal;border:1px dashed #D9B44A;border-radius:4px;padding:0 4px}
   .horario{font-size:22px;color:var(--oxford)}
   .video{aspect-ratio:16/9;background:var(--beige);border-radius:12px;display:grid;place-items:center;color:var(--cafe)}
-  .fotos{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}
-  .fotos div{aspect-ratio:1;background:var(--beige);border-radius:10px;display:grid;place-items:center;color:var(--cafe);font-size:14px}
+  .fotos{display:grid;gap:12px;grid-template-columns:repeat(3,1fr)}
+  .fotos a{display:block;aspect-ratio:1;overflow:hidden;border-radius:10px;background:var(--beige)}
+  .fotos img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+  .fotos a:hover img{transform:scale(1.04)}
+  @media (max-width:600px){.fotos{grid-template-columns:repeat(2,1fr)}}
   .mapa{aspect-ratio:16/9;background:var(--beige);border-radius:12px;display:grid;place-items:center;color:var(--cafe)}
 
   footer{background:var(--cafe);color:var(--marfil);text-align:center;padding:40px 0;font-size:15px}
@@ -165,7 +168,7 @@
       </div>
       <h2 style="margin-top:56px">Galería</h2>
       <p class="sub">Momentos de nuestra comunidad</p>
-      <div class="fotos"><div>Foto</div><div>Foto</div><div>Foto</div><div>Foto</div></div>
+      <div class="fotos"><a href="img/galeria/comunidad-01.jpg" target="_blank"><img src="img/galeria/comunidad-01.jpg" alt="Reunión de oración y alabanza" loading="lazy"></a><a href="img/galeria/comunidad-02.jpg" target="_blank"><img src="img/galeria/comunidad-02.jpg" alt="Equipo de alabanza" loading="lazy"></a><a href="img/galeria/comunidad-03.jpg" target="_blank"><img src="img/galeria/comunidad-03.jpg" alt="Momento de oración" loading="lazy"></a><a href="img/galeria/comunidad-04.jpg" target="_blank"><img src="img/galeria/comunidad-04.jpg" alt="Alabanza: bajo y teclado" loading="lazy"></a><a href="img/galeria/comunidad-05.jpg" target="_blank"><img src="img/galeria/comunidad-05.jpg" alt="Congregación en oración" loading="lazy"></a><a href="img/galeria/comunidad-06.jpg" target="_blank"><img src="img/galeria/comunidad-06.jpg" alt="Oración y alabanza" loading="lazy"></a><a href="img/galeria/comunidad-07.jpg" target="_blank"><img src="img/galeria/comunidad-07.jpg" alt="Alabanza con la Biblia abierta" loading="lazy"></a><a href="img/galeria/comunidad-08.jpg" target="_blank"><img src="img/galeria/comunidad-08.jpg" alt="Música durante la reunión" loading="lazy"></a><a href="img/galeria/comunidad-09.jpg" target="_blank"><img src="img/galeria/comunidad-09.jpg" alt="Oración en comunidad" loading="lazy"></a></div>
     </div>
   </section>
 
