@@ -10,7 +10,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Lora:ital@0;1&display=swap" rel="stylesheet">
 <style>
   :root{
-    --oxford:#3C3F44; --negro:#1C1C1C; --blanco:#FFFFFF; --hueso:#F5F3EF; --linea:#E2DFD9; --acento:#8C7A5B;
+    /* Paleta institucional ARCA */
+    --cafe:#654321; --caramelo:#98734C; --arena:#C19A6B; --beige:#D6C29A; --marfil:#E9DCC5;
+    --oxford:var(--cafe); --negro:#3A2716; --blanco:#FFFDF9; --hueso:#F6EFE3; --linea:#E9DCC5; --acento:var(--caramelo);
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
@@ -20,7 +22,7 @@
   .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
 
   /* Encabezado */
-  header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--linea)}
+  header{position:sticky;top:0;z-index:10;background:rgba(255,253,249,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--linea)}
   .nav{display:flex;align-items:center;height:68px}
   .nav nav{margin-left:auto}
   .marca{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:600;letter-spacing:.25em;color:var(--oxford)}
@@ -38,12 +40,13 @@
   }
 
   /* Portada */
-  .hero{background:var(--hueso);text-align:center;padding:70px 0 80px}
+  .hero{background:var(--caramelo);color:var(--marfil);text-align:center;padding:70px 0 80px}
   .hero img{width:220px;margin:0 auto 28px}
-  .hero h1{font-weight:300;font-size:clamp(28px,5vw,46px);letter-spacing:.06em;margin:0 0 10px;color:var(--oxford)}
-  .hero p.cita{font-family:Lora,serif;font-style:italic;color:#5a5d63;max-width:640px;margin:0 auto 30px}
-  .btn{display:inline-block;padding:13px 28px;border-radius:999px;background:var(--oxford);color:var(--blanco);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;font-size:15px}
-  .btn.sec{background:transparent;color:var(--oxford);border:1.5px solid var(--oxford);margin-left:8px}
+  .hero h1{font-weight:300;font-size:clamp(28px,5vw,46px);letter-spacing:.06em;margin:0 0 10px;color:var(--marfil)}
+  .hero .horario{color:var(--marfil)}
+  .hero p.cita{font-family:Lora,serif;font-style:italic;color:var(--marfil);max-width:640px;margin:0 auto 30px}
+  .btn{display:inline-block;padding:13px 28px;border-radius:999px;background:var(--cafe);color:var(--marfil);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;font-size:15px}
+  .btn.sec{background:transparent;color:var(--marfil);border:1.5px solid var(--marfil);margin-left:8px}
 
   /* Secciones */
   section{padding:72px 0;border-bottom:1px solid var(--linea)}
@@ -53,23 +56,23 @@
   .grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
   .card{background:var(--blanco);border:1px solid var(--linea);border-radius:12px;padding:24px}
   .card h3{margin:0 0 6px;font-weight:600;color:var(--oxford)}
-  .card p{margin:0;color:#4a4d52}
-  .pendiente{background:#FFF6D9;border:1px dashed #D9B44A;border-radius:4px;padding:0 4px}
+  .card p{margin:0;color:#5b4632}
+  .pendiente{background:#FFF6D9;color:#5b4632;font-style:normal;border:1px dashed #D9B44A;border-radius:4px;padding:0 4px}
   .horario{font-size:22px;color:var(--oxford)}
-  .video{aspect-ratio:16/9;background:#d9d6d0;border-radius:12px;display:grid;place-items:center;color:#6b6e73}
+  .video{aspect-ratio:16/9;background:var(--beige);border-radius:12px;display:grid;place-items:center;color:var(--cafe)}
   .fotos{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}
-  .fotos div{aspect-ratio:1;background:#d9d6d0;border-radius:10px;display:grid;place-items:center;color:#6b6e73;font-size:14px}
-  .mapa{aspect-ratio:16/9;background:#d9d6d0;border-radius:12px;display:grid;place-items:center;color:#6b6e73}
+  .fotos div{aspect-ratio:1;background:var(--beige);border-radius:10px;display:grid;place-items:center;color:var(--cafe);font-size:14px}
+  .mapa{aspect-ratio:16/9;background:var(--beige);border-radius:12px;display:grid;place-items:center;color:var(--cafe)}
 
-  footer{background:var(--negro);color:#cfcfcf;text-align:center;padding:40px 0;font-size:15px}
-  footer a{color:#fff}
+  footer{background:var(--cafe);color:var(--marfil);text-align:center;padding:40px 0;font-size:15px}
+  footer a{color:var(--marfil)}
 </style>
 </head>
 <body>
 
 <header>
   <div class="wrap nav">
-    <a class="marca" href="#inicio"><img src="img/logo-arca.png" alt="Logo Iglesia ARCA"> ARCA</a>
+    <a class="marca" href="#inicio"><img src="img/logo-cafe.png" alt="Logo Iglesia ARCA"> ARCA</a>
     <button class="menu-btn" aria-label="Abrir menú" onclick="document.getElementById('menu').classList.toggle('abierto')">☰ Menú</button>
     <nav>
       <ul id="menu" onclick="this.classList.remove('abierto')">
@@ -88,7 +91,7 @@
   <!-- 1. INICIO -->
   <div class="hero" id="inicio">
     <div class="wrap">
-      <img src="img/logo-arca.png" alt="Logo Iglesia ARCA">
+      <img src="img/logo-marfil.png" alt="Logo Iglesia ARCA">
       <h1>Bienvenido a la Iglesia ARCA</h1>
       <p class="cita"><span class="pendiente">[Versículo o frase de bienvenida de la iglesia]</span></p>
       <p class="horario">Domingos 11:00 am · Av. San Bernabé No. 273</p>
